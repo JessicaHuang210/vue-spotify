@@ -10,7 +10,7 @@
     </form>
     <div class="account">
       <img class="account__img" :src="require('@A/user.jpeg')" />
-      <span class="account__name">黃婉柔</span>
+      <span class="account__name">王小明</span>
       <font-awesome-icon class="account__icon" icon="chevron-down"></font-awesome-icon>
     </div>
   </header>

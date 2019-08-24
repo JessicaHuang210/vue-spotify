@@ -1,3 +1,47 @@
 .sidebar-right {
+  padding: 1.5rem;
   width: 25rem;
+  .hr {
+    margin: 2rem 0;
+    border-top: 1px solid $color-grey-3;
+  }
+  .friend {
+    position: relative;
+    font-size: $font-size-xs;
+
+    @include flex;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    > :not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &__img {
+      width: 4rem;
+      border-radius: 10rem;
+    }
+
+    &__info {
+      overflow: hidden;
+      white-space: nowrap;
+      line-height: normal;
+      > div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &__name {
+      color: $color-white;
+      font-size: $font-size-sm;
+    }
+
+    &__state {
+      position: absolute;
+      top: 0;
+      right: 0;
+      line-height: 2rem;
+    }
+  }
 }

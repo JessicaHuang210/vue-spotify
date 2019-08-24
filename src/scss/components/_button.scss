@@ -1,0 +1,16 @@
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.2rem;
+  min-width: 10rem;
+  border-radius: 10rem;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: $font-size-xs;
+  &--primary {
+    background-color: $color-primary;
+  }
+  &--second {
+    border: 1px solid $color-white;
+    background-color: rgba($color-black, 0.3);
+  }
+}
