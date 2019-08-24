@@ -1,15 +1,27 @@
 module.exports = {
+  devServer: {
+    port: 6800, // 配置端口
+    open: true
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        "@C": "@/components",
+        "@V": "@/views",
+        "@SCSS": "@/scss",
+        "@U": "@/utils",
+        "@A": "@/assets"
+      }
+    }
+  },
   css: {
     loaderOptions: {
       scss: {
         data: `
-                    @import "src/scss/variables.scss";
-                `
+                @import "@SCSS/utils/_variables.scss";
+                @import "@SCSS/utils/_mixins.scss";
+              `
       }
     }
-  },
-  devServer: {
-    port: 6800, // 配置端口
-    open: true
   }
 };

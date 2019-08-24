@@ -1,0 +1,49 @@
+.sidebar-left {
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  width: 20rem;
+  .menu {
+    margin-bottom: 1rem;
+    padding-top: 1.5rem;
+    &__link {
+      position: relative;
+      display: block;
+      padding: 0.7rem 2rem;
+      &:hover,
+      &.active {
+        color: $color-white;
+      }
+      &.active::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 0.4rem;
+        height: 1.9rem;
+        background-color: $color-primary;
+        content: "";
+        transform: translateY(-50%);
+      }
+    }
+    &__title {
+      display: block;
+      margin-top: 3rem;
+      padding: 0 2rem 0.7rem 2rem;
+      font-size: $font-size-xs;
+    }
+  }
+  .add-list {
+    display: block;
+    margin-top: auto;
+    padding: 2rem 0;
+    border-top: 1px solid $color-grey-3;
+    text-align: center;
+    &__icon {
+      margin-right: 0.5rem;
+    }
+    &:hover {
+      color: $color-white;
+    }
+  }
+}
