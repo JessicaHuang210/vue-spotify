@@ -1,10 +1,11 @@
 .sidebar-left {
+  position: relative;
   display: flex;
-  overflow-y: auto;
   flex-direction: column;
   width: 20rem;
   .menu {
-    margin-bottom: 1rem;
+    overflow-y: auto;
+    margin-bottom: 5.4rem;
     padding-top: 1.5rem;
     &__link {
       position: relative;
@@ -34,14 +35,18 @@
     }
   }
   .add-list {
+    position: absolute;
+    bottom: 0;
     display: block;
     margin-top: auto;
     padding: 2rem 0;
+    width: 100%;
     border-top: 1px solid $color-grey-3;
     text-align: center;
     &__icon {
       margin-right: 0.5rem;
     }
+
     &:hover {
       color: $color-white;
     }

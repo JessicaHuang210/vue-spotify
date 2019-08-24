@@ -6,6 +6,7 @@
       <Content />
       <Right />
     </main>
+    <Footer />
   </div>
 </template>
 <script>
@@ -13,9 +14,10 @@ import Header from "@C/Header.vue";
 import Left from "@C/SidebarLeft.vue";
 import Right from "@C/SidebarRight.vue";
 import Content from "@C/Container.vue";
+import Footer from "@C/Footer.vue";
 export default {
   name: "Layout",
-  components: { Header, Left, Right, Content }
+  components: { Header, Left, Right, Content, Footer }
 };
 </script>
 <style lang="scss" scoped>

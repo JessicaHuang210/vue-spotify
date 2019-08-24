@@ -1,0 +1,21 @@
+.footer {
+  padding: 1.5rem;
+  background-color: $color-grey-3;
+
+  @include flex;
+  .info {
+    line-height: normal;
+
+    @include flex;
+    &__img {
+      margin-right: 1rem;
+      width: 5rem;
+    }
+    &__song {
+      font-size: $font-size-sm;
+    }
+    &__singer {
+      font-size: $font-size-xs;
+    }
+  }
+}
