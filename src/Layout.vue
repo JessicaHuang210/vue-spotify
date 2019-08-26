@@ -27,6 +27,7 @@ export default {
   height: 100%;
   main {
     display: flex;
+    overflow: hidden;
     flex-grow: 1;
     min-height: 0;
     > div[class^="sidebar-"] {
