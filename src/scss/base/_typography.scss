@@ -23,6 +23,12 @@ body {
   &--sm {
     font-size: $font-size-xs;
   }
+  &--primary {
+    color: $color-primary;
+  }
+  &--center {
+    text-align: center;
+  }
 }
 
 a {
@@ -33,7 +39,4 @@ a {
 .title-2nd {
   color: $color-white;
   font-size: $font-size-lg;
-}
-.text-center {
-  text-align: center;
 }

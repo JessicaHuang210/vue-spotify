@@ -1,6 +1,12 @@
 .sidebar-right {
+  overflow-y: auto;
   padding: 1.5rem;
   width: 25rem;
+  transition: 0.2s;
+
+  @include rwd(lg) {
+    transform: translateX(100%);
+  }
   .hr {
     margin: 2rem 0;
     border-top: 1px solid $color-grey-3;

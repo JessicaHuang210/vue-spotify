@@ -16,7 +16,7 @@
       <div class="friend__state" v-if="i.time">{{i.time}}</div>
       <font-awesome-icon v-else class="friend__state" icon="volume-up"></font-awesome-icon>
     </div>
-    <div class="text-center">
+    <div class="text--center">
       <a href="#" class="btn btn--second">尋找好友</a>
     </div>
   </div>

@@ -3,3 +3,37 @@
   align-items: $align;
   justify-content: $justi;
 }
+
+// rwd斷點
+@mixin rwd($point) {
+  @if $point == xs {
+    @media (max-width: 375px) {
+      @content;
+    }
+  }
+  @if $point == sm {
+    @media (max-width: 568px) {
+      @content;
+    }
+  }
+  @if $point == pad {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $point == md {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+  @if $point == lg {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $point == llg {
+    @media (max-width: 1540px) {
+      @content;
+    }
+  }
+}

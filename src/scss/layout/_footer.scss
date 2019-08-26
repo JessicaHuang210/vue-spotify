@@ -4,6 +4,8 @@
 
   @include flex;
   .info {
+    position: relative;
+    white-space: nowrap;
     line-height: normal;
 
     @include flex;
@@ -12,10 +14,36 @@
       width: 5rem;
     }
     &__song {
+      display: inline-block;
+      overflow: hidden;
+      margin-right: 2rem;
+      max-width: $info-text-width;
+      width: auto;
+      text-overflow: ellipsis;
       font-size: $font-size-sm;
+      &:hover {
+        color: $color-white;
+        text-decoration: underline;
+      }
     }
     &__singer {
+      overflow: hidden;
+      max-width: $info-text-width;
+      width: auto;
+      text-overflow: ellipsis;
       font-size: $font-size-xs;
+      &:hover {
+        color: $color-white;
+        text-decoration: underline;
+      }
+    }
+    &__icon {
+      position: absolute;
+      top: 1rem;
+      right: 0;
+      &:not(:last-child):hover {
+        color: $color-white;
+      }
     }
   }
 }

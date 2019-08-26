@@ -9,8 +9,8 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "Layout",
-      component: () => import("./Layout.vue")
+      name: "Home",
+      component: () => import("./views/Home.vue")
     },
     {
       path: "/about",
