@@ -3,6 +3,7 @@
   padding: 1.5rem;
   width: 25rem;
   transition: 0.2s;
+  animation: fadeRightIn 0.5s $animate-func 0.2s both;
 
   @include rwd(lg) {
     transform: translateX(100%);

@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar-left">
     <nav class="menu">
-      <a href="#" class="menu__link active">瀏覽</a>
+      <router-link :to="{name:'Home'}" class="menu__link">瀏覽</router-link>
       <a href="#" class="menu__link">電台</a>
       <span class="menu__title">你的音樂</span>
       <a href="#" class="menu__link">你的 Daily Mix</a>

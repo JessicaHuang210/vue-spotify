@@ -10,11 +10,11 @@
   </div>
 </template>
 <script>
-import Header from "@C/Header.vue";
-import Left from "@C/SidebarLeft.vue";
-import Right from "@C/SidebarRight.vue";
-import Content from "@C/Container.vue";
-import Footer from "@C/Footer.vue";
+import Header from "@L/Header.vue";
+import Left from "@L/SidebarLeft.vue";
+import Right from "@L/SidebarRight.vue";
+import Content from "@L/Container.vue";
+import Footer from "@L/Footer.vue";
 export default {
   name: "Layout",
   components: { Header, Left, Right, Content, Footer }

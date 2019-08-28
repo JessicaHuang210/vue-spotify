@@ -35,7 +35,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+//頁面大標題
+.title-1st {
+  color: $color-white;
+  font-size: 5rem;
+}
 .title-2nd {
   color: $color-white;
   font-size: $font-size-lg;

@@ -1,6 +1,7 @@
 .header {
   padding: 1rem 2rem;
   background-color: $color-grey-1;
+  animation: fadeTopIn 0.5s $animate-func;
 
   @include flex;
 }

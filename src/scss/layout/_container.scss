@@ -1,4 +1,5 @@
 .container {
-  padding: 3rem;
+  padding: 2rem;
   width: 100%;
+  animation: fadeIn 0.5s $animate-func 0.5s both;
 }

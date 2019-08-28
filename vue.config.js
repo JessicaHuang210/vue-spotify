@@ -8,6 +8,7 @@ module.exports = {
     resolve: {
       alias: {
         "@C": "@/components",
+        "@L": "@/layout",
         "@V": "@/views",
         "@SCSS": "@/scss",
         "@U": "@/utils",
