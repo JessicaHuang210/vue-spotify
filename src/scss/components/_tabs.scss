@@ -31,6 +31,7 @@
   &__content {
     &__item {
       display: none;
+      animation: fadeIn 0.5s $animate-func;
       &.active {
         display: block;
       }

@@ -35,6 +35,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+img {
+  width: 100%;
+}
 //頁面大標題
 .title-1st {
   color: $color-white;
@@ -47,9 +50,20 @@ a {
 // 有底線的標題
 .title-border-b {
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 0.7rem;
   border-bottom: 1px solid $color-grey-3;
   color: $color-white;
   font-size: $font-size-lg;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    margin-bottom: $gutter;
+    width: calc((100% - 2 * #{$gutter}) / 3);
+    &:not(:nth-child(3n)) {
+      margin-right: $gutter;
+    }
+  }
 }
