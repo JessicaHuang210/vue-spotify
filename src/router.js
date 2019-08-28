@@ -16,10 +16,6 @@ export default new Router({
       path: "/about",
       name: "about",
       component: () => import("./views/About.vue")
-    },
-    {
-      path: "*",
-      redirect: "/"
     }
   ]
 });
