@@ -1,7 +1,14 @@
 <template>
   <div class="home">
     <h1 class="title-1st mb-2">瀏覽</h1>
-    <Tabs :tabs="tabs" />
+    <Tabs :tabs="tabs">
+      <div slot="0">
+        <h3 class="title-border-b mt-2">{{tabs[0].name}}</h3>
+        <div class="grid">
+          <div class="grid__item"></div>
+        </div>
+      </div>
+    </Tabs>
   </div>
 </template>
 
@@ -23,3 +30,4 @@ export default {
   components: { Tabs }
 };
 </script>
+<style lang="scss" scoped src="@SCSS/pages/_home.scss"></style> 

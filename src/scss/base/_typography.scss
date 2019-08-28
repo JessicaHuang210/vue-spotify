@@ -44,3 +44,12 @@ a {
   color: $color-white;
   font-size: $font-size-lg;
 }
+// 有底線的標題
+.title-border-b {
+  display: block;
+  margin-bottom: 2rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid $color-grey-3;
+  color: $color-white;
+  font-size: $font-size-lg;
+}

@@ -29,6 +29,11 @@
     }
   }
   &__content {
-    display: none;
+    &__item {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
   }
 }

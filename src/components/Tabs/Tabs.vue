@@ -11,7 +11,9 @@
       >{{elm.name}}</a>
     </div>
     <div class="tabs__content">
-      <div v-for="elm in tabs" class="tabs__content__item">{{elm.name}}</div>
+      <div v-for="(elm,i) in tabs" :class="{active:nowtab === i}" class="tabs__content__item">
+        <slot :name="i" />
+      </div>
     </div>
   </div>
 </template>
