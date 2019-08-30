@@ -4,7 +4,7 @@ module.exports = {
     open: true
   },
   publicPath:
-    process.env.NODE_ENV === "production" ? "/vue-spotify/dist/" : "./",
+    process.env.NODE_ENV === "production" ? "./vue-spotify/dist/" : "./",
   configureWebpack: {
     resolve: {
       alias: {
