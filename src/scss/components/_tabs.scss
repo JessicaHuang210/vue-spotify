@@ -1,6 +1,9 @@
 .tabs {
   &__header {
+    position: sticky;
+    top: -2rem;
     border-bottom: 1px solid $color-grey-3;
+    background-color: rgba($color-grey-2, 0.9);
 
     @include flex;
     &__item {

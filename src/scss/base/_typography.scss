@@ -56,14 +56,3 @@ img {
   color: $color-white;
   font-size: $font-size-lg;
 }
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  &__item {
-    margin-bottom: $gutter;
-    width: calc((100% - 2 * #{$gutter}) / 3);
-    &:not(:nth-child(3n)) {
-      margin-right: $gutter;
-    }
-  }
-}
