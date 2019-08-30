@@ -5,10 +5,10 @@ Vue.use(Router);
 
 export default new Router({
   base: process.env.BASE_URL,
-  mode: "history",
+  mode: "hash",
   routes: [
     {
-      path: "/",
+      path: "",
       name: "Home",
       component: () => import("./views/Home.vue")
     },
