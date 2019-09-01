@@ -13,7 +13,7 @@
       </div>
       <div slot="1">
         <h3 class="title-border-b mt-2">精選排行榜</h3>
-        <div class="grid">
+        <div class="grid mb-5">
           <div class="grid__item card-2nd" v-for="i in tops">
             <img class="card-2nd__thumbnail" :src="i.thumbnail" />
             <div class="card-2nd__title">{{i.title}}</div>
@@ -21,6 +21,7 @@
             <div class="card-2nd__fans">{{numberWithCommas(i.fans)}} 位粉絲</div>
           </div>
         </div>
+        <div class="hr"></div>
       </div>
       <div slot="2">
         <h3 class="title-border-b mt-2">最棒的最新發行音樂</h3>
