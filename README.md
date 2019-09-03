@@ -1,5 +1,7 @@
 # spotify
 
+[線上檢視](https://jessicahuang210.github.io/vue-spotify/dist/#/)
+
 ## Project setup
 ```
 yarn install
