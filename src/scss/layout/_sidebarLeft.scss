@@ -16,7 +16,7 @@
       &.active {
         color: $color-white;
       }
-      &.router-link-active::before {
+      &.router-link-exact-active::before {
         position: absolute;
         top: 50%;
         left: 0;
