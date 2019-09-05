@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --mode local",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "start": "open http://localhost:8888 && PORT=8888 serve -s dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",

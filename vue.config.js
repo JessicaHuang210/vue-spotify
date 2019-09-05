@@ -3,7 +3,7 @@ var path = require("path");
 
 module.exports = {
   devServer: {
-    port: 6800, // 配置端口
+    port: 8888, // 配置端口
     open: true
   },
   publicPath: "./",

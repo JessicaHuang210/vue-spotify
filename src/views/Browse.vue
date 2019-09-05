@@ -108,7 +108,7 @@ export default {
   created() {
     this.$ajax
       .get(
-        "https://accounts.spotify.com/authorize?client_id=6b8cc159f3e049a89c5d91be11f0dab6&response_type=code&redirect_uri=https://jessicahuang210.github.io/vue-spotify/dist/#/callback"
+        "https://accounts.spotify.com/en/authorize?response_type=code&client_id=6b8cc159f3e049a89c5d91be11f0dab6&scope=user-read-private%20user-read-email&redirect_uri=http:%2F%2Flocalhost:8888%2Fcallback%2F&state=eAjhea0MYX6qP7Sw"
       )
       .then(res => {
         console.log(res);
