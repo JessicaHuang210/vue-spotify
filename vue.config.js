@@ -1,3 +1,6 @@
+var webpack = require("webpack");
+var path = require("path");
+
 module.exports = {
   devServer: {
     port: 6800, // 配置端口
@@ -14,7 +17,19 @@ module.exports = {
         "@U": "@/utils",
         "@A": "@/assets"
       }
-    }
+    },
+    plugins: [
+      // new webpack.ProvidePlugin({
+      //   _M: path.resolve("./src/store/mutations.js"),
+      //   moment: "moment"
+      // }),
+      new webpack.DefinePlugin({
+        "process.env": {
+          PACKAGE_JSON:
+            '"' + escape(JSON.stringify(require("./package.json"))) + '"'
+        }
+      })
+    ]
   },
   css: {
     loaderOptions: {
