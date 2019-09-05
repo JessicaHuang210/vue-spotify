@@ -9,9 +9,12 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import "@/scss/main.scss";
 
+//axios
+import axios from "axios";
+Vue.prototype.$ajax = axios;
+
 library.add(fas, far, fab);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
-
 Vue.config.productionTip = false;
 
 new Vue({

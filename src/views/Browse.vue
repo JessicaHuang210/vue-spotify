@@ -105,7 +105,15 @@ export default {
       ]
     };
   },
-  created() {},
+  created() {
+    this.$ajax
+      .get(
+        "https://accounts.spotify.com/authorize?client_id=6b8cc159f3e049a89c5d91be11f0dab6&response_type=code&redirect_uri=https://jessicahuang210.github.io/vue-spotify/dist/#/callback"
+      )
+      .then(res => {
+        console.log(res);
+      });
+  },
   methods: {
     numberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
