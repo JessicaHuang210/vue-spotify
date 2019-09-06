@@ -3,15 +3,33 @@
   display: flex;
   flex-direction: column;
   width: 20rem;
-  animation: fadeLeftIn 0.5s $animate-func 0.2s both;
+  background-color: $color-grey-1;
+  animation: fadeLeftIn $transition-seconds $animate-func 0.2s both;
+
+  @include rwd(md) {
+    display: none;
+    transform: translateX(-100%);
+    animation: none;
+    &.active {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      display: flex;
+      transform: translateX(0);
+      animation: fadeLeftIn $transition-seconds $animate-func 0.2s both;
+    }
+  }
+
   .menu {
     overflow-y: auto;
     margin-bottom: 5.4rem;
     padding-top: 1.5rem;
     &__link {
       position: relative;
-      display: block;
       padding: 0.7rem 2rem;
+
+      @include flex;
       &:hover,
       &.active {
         color: $color-white;
@@ -27,7 +45,14 @@
         content: "";
         transform: translateY(-50%);
       }
+      &__icon {
+        margin-right: 1rem;
+        font-size: 2rem;
+      }
+      &__text {
+      }
     }
+
     &__title {
       display: block;
       margin-top: 3rem;

@@ -4,6 +4,12 @@
   &__item {
     margin-bottom: $gutter;
     width: calc((100% - 2 * #{$gutter}) / 3);
+
+    @include rwd(sm) {
+      margin-right: 0;
+      width: 100%;
+    }
+
     &:not(:nth-child(3n)) {
       margin-right: $gutter;
     }

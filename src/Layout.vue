@@ -7,6 +7,9 @@
       <Right />
     </main>
     <Footer />
+    <transition name="fade">
+      <div @click="closeMenu" class="overlay" v-if="menuActive"></div>
+    </transition>
   </div>
 </template>
 <script>
@@ -15,9 +18,22 @@ import Left from "@L/SidebarLeft.vue";
 import Right from "@L/SidebarRight.vue";
 import Content from "@L/Container.vue";
 import Footer from "@L/Footer.vue";
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "Layout",
-  components: { Header, Left, Right, Content, Footer }
+  components: { Header, Left, Right, Content, Footer },
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters(["menuActive"])
+  },
+  methods: {
+    ...mapActions(["setMenuActive"]),
+    closeMenu() {
+      this.setMenuActive(false);
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -37,5 +53,14 @@ export default {
       font-size: $font-size-sm;
     }
   }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($color-black, 0.5);
+  cursor: pointer;
 }
 </style>

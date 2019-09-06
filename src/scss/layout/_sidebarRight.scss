@@ -3,10 +3,12 @@
   padding: 1.5rem;
   width: 25rem;
   transition: 0.2s;
-  animation: fadeRightIn 0.5s $animate-func 0.2s both;
+  animation: fadeRightIn $transition-seconds $animate-func 0.2s both;
 
   @include rwd(lg) {
+    display: none;
     transform: translateX(100%);
+    animation: none;
   }
   .hr {
     margin: 2rem 0;

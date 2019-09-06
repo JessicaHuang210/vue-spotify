@@ -4,15 +4,9 @@
     <Tabs :tabs="tabs">
       <Tab0 :data="{musicStyle:musicStyle,tabs:tabs}" slot="0" />
       <Tab1 :data="{tops:tops,tabs:tabs}" slot="1"></Tab1>
-      <div slot="2">
-        <h3 class="title-border-b mt-2">最棒的最新發行音樂</h3>
-      </div>
-      <div slot="3">
-        <h3 class="title-border-b mt-2">為您打造的播放清單</h3>
-      </div>
-      <div slot="4">
-        <h3 class="title-border-b mt-2">{{tabs[4].name}}</h3>
-      </div>
+      <Tab2 slot="2"></Tab2>
+      <Tab3 slot="3"></Tab3>
+      <Tab4 :data="{tabs:tabs}" slot="4"></Tab4>
     </Tabs>
   </div>
 </template>
@@ -21,18 +15,20 @@
 import Tabs from "@C/Tabs/Tabs.vue";
 import Tab0 from "./Tab0";
 import Tab1 from "./Tab1";
-import { Grid, GItem } from "@C/Grid";
+import Tab2 from "./Tab2";
+import Tab3 from "./Tab3";
+import Tab4 from "./Tab4";
 
 export default {
   name: "Browse",
   data() {
     return {
       tabs: [
-        { name: "曲風與情調" },
-        { name: "排行榜" },
-        { name: "最新發行" },
-        { name: "發掘" },
-        { name: "演唱會" }
+        { key: 0, name: "曲風與情調" },
+        { key: 1, name: "排行榜" },
+        { key: 2, name: "最新發行" },
+        { key: 3, name: "發掘" },
+        { key: 4, name: "演唱會" }
       ],
       musicStyle: [
         {
@@ -89,17 +85,9 @@ export default {
       ]
     };
   },
-  created() {
-    this.$ajax
-      .get(
-        "https://accounts.spotify.com/en/authorize?response_type=code&client_id=6b8cc159f3e049a89c5d91be11f0dab6&scope=user-read-private%20user-read-email&redirect_uri=http:%2F%2Flocalhost:8888%2Fcallback%2F&state=eAjhea0MYX6qP7Sw"
-      )
-      .then(res => {
-        console.log(res);
-      });
-  },
+  created() {},
   methods: {},
-  components: { Tabs, Tab0, Tab1, Grid, GItem }
+  components: { Tabs, Tab0, Tab1, Tab2, Tab3, Tab4 }
 };
 </script>
 <style lang="scss" scoped src="@SCSS/pages/_browse.scss"></style> 

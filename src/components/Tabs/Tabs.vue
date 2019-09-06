@@ -5,7 +5,7 @@
     </div>
     <div class="tabs__content">
       <div :class="{active:nowtab === i}" :key="i" class="tabs__content__item" v-for="(elm,i) in tabs">
-        <slot :name="i" />
+        <slot :name="elm.key" />
       </div>
     </div>
   </div>

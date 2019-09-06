@@ -47,3 +47,12 @@
     opacity: 1;
   }
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity $transition-seconds;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

@@ -1,7 +1,7 @@
 .footer {
   padding: 1.5rem;
   background-color: $color-grey-3;
-  animation: fadeBottomIn 0.5s $animate-func;
+  animation: fadeBottomIn $transition-seconds $animate-func;
 
   @include flex;
   .info {

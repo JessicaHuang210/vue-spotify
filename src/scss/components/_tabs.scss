@@ -2,8 +2,11 @@
   &__header {
     position: sticky;
     top: -2rem;
+    z-index: 1;
+    overflow-x: auto;
     border-bottom: 1px solid $color-grey-3;
     background-color: rgba($color-grey-2, 0.9);
+    white-space: nowrap;
 
     @include flex;
     &__item {

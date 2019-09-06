@@ -2,5 +2,5 @@
   overflow-y: auto;
   padding: 2rem;
   width: 100%;
-  animation: fadeIn 0.5s $animate-func 0.5s both;
+  animation: fadeIn $transition-seconds $animate-func 0.5s both;
 }
