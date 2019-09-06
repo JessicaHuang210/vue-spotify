@@ -10,7 +10,7 @@ export default new Router({
     {
       path: "",
       name: "Browse",
-      component: () => import("./views/Browse.vue")
+      component: () => import("./views/Browse")
     },
     {
       path: "/home",

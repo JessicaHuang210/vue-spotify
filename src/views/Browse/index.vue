@@ -2,27 +2,8 @@
   <div class="browse">
     <h1 class="title-1st mb-2">瀏覽</h1>
     <Tabs :tabs="tabs">
-      <div slot="0">
-        <h3 class="title-border-b mt-2">{{tabs[0].name}}</h3>
-        <Grid>
-          <GItem :key="i.title" class="card-1st" v-for="i in musicStyle">
-            <img :src="i.thumbnail" />
-            <span class="card-1st__text">{{i.title}}</span>
-          </GItem>
-        </Grid>
-      </div>
-      <div slot="1">
-        <h3 class="title-border-b mt-2">精選排行榜</h3>
-        <div class="grid mb-5">
-          <div :key="i.name" class="grid__item card-2nd" v-for="i in tops">
-            <img :src="i.thumbnail" class="card-2nd__thumbnail" />
-            <div class="card-2nd__title">{{i.title}}</div>
-            <div class="card-2nd__description">{{i.description}}</div>
-            <div class="card-2nd__fans">{{numberWithCommas(i.fans)}} 位粉絲</div>
-          </div>
-        </div>
-        <div class="hr"></div>
-      </div>
+      <Tab0 :data="{musicStyle:musicStyle,tabs:tabs}" slot="0" />
+      <Tab1 :data="{tops:tops,tabs:tabs}" slot="1"></Tab1>
       <div slot="2">
         <h3 class="title-border-b mt-2">最棒的最新發行音樂</h3>
       </div>
@@ -38,7 +19,10 @@
 
 <script>
 import Tabs from "@C/Tabs/Tabs.vue";
+import Tab0 from "./Tab0";
+import Tab1 from "./Tab1";
 import { Grid, GItem } from "@C/Grid";
+
 export default {
   name: "Browse",
   data() {
@@ -114,12 +98,8 @@ export default {
         console.log(res);
       });
   },
-  methods: {
-    numberWithCommas(x) {
-      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-  },
-  components: { Tabs, Grid, GItem }
+  methods: {},
+  components: { Tabs, Tab0, Tab1, Grid, GItem }
 };
 </script>
 <style lang="scss" scoped src="@SCSS/pages/_browse.scss"></style> 
