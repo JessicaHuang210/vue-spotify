@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --mode local",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "start": "open http://localhost:8888 && PORT=8888 serve -s dist"
   },
