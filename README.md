@@ -1,6 +1,6 @@
 # spotify
 
-[線上檢視](https://jessicahuang210.github.io/vue-spotify/dist/#/)
+[線上檢視](https://jessicahuang210.github.io/vue-spotify)
 
 ## Project setup
 ```
