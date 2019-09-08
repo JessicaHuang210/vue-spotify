@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "start": "open http://localhost:8888 && PORT=8888 serve -s dist"
+    "start": "open http://localhost:8888 && PORT=8888 serve -s dist",
+    "push_PROD": "sh deploy.sh prod"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
