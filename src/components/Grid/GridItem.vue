@@ -5,6 +5,6 @@
 </template>
 <script>
 export default {
-  name: "Grid-item"
+  name: "GridItem"
 };
 </script>

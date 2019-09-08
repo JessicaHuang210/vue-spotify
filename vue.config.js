@@ -6,7 +6,7 @@ module.exports = {
     port: 8888, // 配置端口
     open: true
   },
-  publicPath: "./",
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-spotify/" : "/",
   configureWebpack: {
     resolve: {
       alias: {

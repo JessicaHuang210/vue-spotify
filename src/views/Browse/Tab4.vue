@@ -6,7 +6,12 @@
 <script>
 export default {
   name: "Tab4",
-  props: ["data"],
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
     return {};
   }

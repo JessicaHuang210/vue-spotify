@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Tabs from "@C/Tabs/Tabs.vue";
+import Tabs from "@C/Tabs";
 import Tab0 from "./Tab0";
 import Tab1 from "./Tab1";
 import Tab2 from "./Tab2";
@@ -78,6 +78,12 @@ export default {
         },
         {
           title: "全球瘋傳前50名",
+          description: "每日為你更新全球最為轉傳討論的歌曲",
+          thumbnail: "https://charts-images.scdn.co/VIRAL_GLOBAL_DEFAULT.jpg",
+          fans: 1514101
+        },
+        {
+          title: "台灣瘋傳前50名",
           description: "每日為你更新全球最為轉傳討論的歌曲",
           thumbnail: "https://charts-images.scdn.co/VIRAL_GLOBAL_DEFAULT.jpg",
           fans: 1514101

@@ -1,3 +1,3 @@
 import Grid from "./Grid";
-import GItem from "./Grid-item";
-export { Grid, GItem };
+import GridItem from "./GridItem";
+export { Grid, GridItem };

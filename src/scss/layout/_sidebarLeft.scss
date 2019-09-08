@@ -31,7 +31,7 @@
 
       @include flex;
       &:hover,
-      &.active {
+      &.router-link-exact-active {
         color: $color-white;
       }
       &.router-link-exact-active::before {
@@ -48,8 +48,6 @@
       &__icon {
         margin-right: 1rem;
         font-size: 2rem;
-      }
-      &__text {
       }
     }
 
