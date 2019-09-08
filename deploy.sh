@@ -4,5 +4,5 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
-git push -f git@github.com:JessicaHuang210/vue-spotify.git master
+git push -f https://github.com/JessicaHuang210/vue-spotify.git master
 cd -
