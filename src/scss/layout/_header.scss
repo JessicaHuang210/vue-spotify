@@ -24,6 +24,9 @@
   background-color: $color-white;
 
   @include flex;
+  @include rwd(md) {
+    display: none;
+  }
   &__input {
     padding-left: 0.5rem;
     width: 100%;
@@ -48,11 +51,11 @@
     border-radius: 10rem;
   }
   &__name {
-    margin-right: 2rem;
+    margin-right: 1rem;
     font-size: $font-size-sm;
   }
   &__icon {
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
   }
   &__dropdown {
     position: absolute;
