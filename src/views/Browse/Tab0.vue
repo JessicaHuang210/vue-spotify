@@ -19,7 +19,6 @@ export default {
       required: true
     }
   },
-  created() {},
   components: { grid: Grid, "grid-item": GridItem }
 };
 </script>

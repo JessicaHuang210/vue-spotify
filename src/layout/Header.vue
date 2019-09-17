@@ -18,7 +18,7 @@
     <div class="account">
       <img :src="require('@A/user.jpeg')" class="account__img" />
       <span class="account__name">{{accountName}}</span>
-      <a @click="toggleAccountDropdownMenuOpen" class="account__icon" href="#">
+      <a @click.prevent="toggleAccountDropdownMenuOpen" class="account__icon" href="#">
         <font-awesome-icon icon="chevron-down"></font-awesome-icon>
       </a>
       <transition name="fade">
@@ -27,6 +27,7 @@
           <a class="account__dropdown__item" href="#">帳戶</a>
           <a class="account__dropdown__item" href="#">設定</a>
           <a class="account__dropdown__item" href="#">登出</a>
+          <a class="account__dropdown__item" @click.prevent="login">登入</a>
         </div>
       </transition>
     </div>
@@ -34,6 +35,7 @@
 </template>
 <script>
 import { mapActions } from "vuex";
+import AJAX from "@/api/axios";
 export default {
   name: "Header",
   data() {
@@ -50,6 +52,9 @@ export default {
     },
     toggleAccountDropdownMenuOpen() {
       this.accountDropdownMenuOpen = !this.accountDropdownMenuOpen;
+    },
+    login() {
+      AJAX.login();
     }
   }
 };
