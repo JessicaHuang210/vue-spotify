@@ -8,44 +8,13 @@ var client_id = "6b8cc159f3e049a89c5d91be11f0dab6"; // Your client id
 var client_secret = "d73a1adebdd44609876377e786046375"; // Your secret
 var redirect_uri = "http://localhost:8080/callback/"; // Your redirect uri
 
-var generateRandomString = function(length) {
-  var text = "";
-  var possible =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-  for (var i = 0; i < length; i++) {
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-  }
-  return text;
-};
-
-var stateKey = "spotify_auth_state";
-
 var app = express();
 app.use(cors()).use(cookieParser());
-
-app.get("/login", function(req, res) {
-  var state = generateRandomString(16);
-  res.cookie(stateKey, state);
-
-  // your application requests authorization
-  var scope = "user-read-private user-read-email";
-  res.redirect(
-    "https://accounts.spotify.com/authorize?" +
-      querystring.stringify({
-        response_type: "code",
-        client_id: client_id,
-        scope: scope,
-        redirect_uri: redirect_uri,
-        state: state
-      })
-  );
-});
 
 app.get("/callback", function(req, res) {
   // your application requests refresh and access tokens
   // after checking the state parameter
-
+  console.log(req);
   var code = req.query.code || null;
   var state = req.query.state || null;
   var storedState = req.cookies ? req.cookies[stateKey] : null;
