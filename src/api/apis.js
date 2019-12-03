@@ -1,5 +1,5 @@
 const APIs = {
-  login: {
+  me: {
     method: "get",
     url: "/api/login"
   }
