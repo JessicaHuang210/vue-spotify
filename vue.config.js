@@ -4,7 +4,14 @@ var path = require("path");
 module.exports = {
   devServer: {
     port: 8080, // 配置端口
-    open: true
+    open: true,
+    proxy: {
+      "^/api": {
+        target: "http://localhost:4600",
+        ws: true,
+        changeOrigin: true
+      }
+    }
   },
   publicPath: process.env.NODE_ENV === "production" ? "/vue-spotify/" : "/",
   configureWebpack: {

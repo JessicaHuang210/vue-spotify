@@ -1,7 +1,7 @@
 const APIs = {
   login: {
     method: "get",
-    url: "/login"
+    url: "/api/login"
   }
 };
 export default APIs;

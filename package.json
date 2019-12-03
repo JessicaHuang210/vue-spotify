@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "start": "open http://localhost:4600 && PORT=4600 serve -s dist",
+    "build": "vue-cli-service build --mode development",
+    "start": "open http://localhost:8080 && PORT=8080 serve -s dist",
     "push_PROD": "sh deploy.sh prod"
   },
   "dependencies": {
